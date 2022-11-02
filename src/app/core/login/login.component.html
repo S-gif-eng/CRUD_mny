@@ -7,13 +7,13 @@
                  <form>
                      <!-- Email input -->
                      <div class="form-outline mb-4">
-                       <input type="email" placeholder="Enter Email" class="form-control" />
+                       <input type="email" placeholder="Enter Email" name="email" [(ngModel)]="email" class="form-control" />
                        <label class="form-label" for="form2Example1">Email address</label>
                      </div>
                    
                      <!-- Password input -->
                      <div class="form-outline mb-4">
-                       <input type="password" class="form-control" placeholder="Enter Password" />
+                       <input type="password" class="form-control"  name="password" [(ngModel)]="password" placeholder="Enter Password" />
                        <label class="form-label" >Password</label>
                      </div>
                    
@@ -37,7 +37,7 @@
                      <div class="text-center">
                         <!-- Submit button -->
                      <button type="button" class="btn btn-primary btn-block mb-4">Login</button>
-                        <p>Not a member? <a href="#!">Register</a></p>
+                        <p>Not a member? <a href="#!" routerLink="/signup">Register</a></p>
                        <p>or sign up with:</p>
                        <button type="button" class="btn btn-link btn-floating mx-1">
                         <i class="fa fa-google"></i>
