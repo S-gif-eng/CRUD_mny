@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "admincrud-7dd2a": {
+      "hosting": {
+        "AdminCrud": [
+          "admincrud-7dd2a"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "admincrud-7dd2a"
+  }
+}

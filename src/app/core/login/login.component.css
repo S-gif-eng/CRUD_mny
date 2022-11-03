@@ -4,3 +4,6 @@
     align-items: center;
     display: flex;
 }
+input.ng-invalid.ng-touched{
+    border:solid red 1px
+}

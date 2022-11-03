@@ -6,19 +6,30 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './core/login/login.component';
 import { SignupComponent } from './core/signup/signup.component';
 import { ForgetComponent } from './core/forget/forget.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './User_Ui/home/home.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { HotToastModule } from '@ngneat/hot-toast';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    ForgetComponent
+    ForgetComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    HotToastModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
